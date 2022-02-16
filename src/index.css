@@ -18,6 +18,10 @@
   --fw-extra-light: 200;
   --fw-light: 300;
   --fw-bold: 700;
+
+  /* reference value after setting font-size to 10px*/
+  font-size: 62.5%;
+  --rem: 1rem;
 }
 
 /* ************************************************ */
@@ -37,7 +41,8 @@ h2,
 h3,
 p,
 figure,
-picture {
+picture,
+body {
   margin: 0;
 }
 
@@ -70,4 +75,37 @@ select {
     transition-duration: 0.01ms !important;
     scroll-behavior: auto !important;
   }
+}
+
+/* setup body */
+body {
+    font-family: 'Karla', sans-serif;
+    font-size: var(--fs-large);
+    background-color: hsl( var(--clr-white));
+    color: hsl( var(--clr-white) );
+    line-height: 1.5;
+    min-height: 100vh;
+}
+
+/* ************************************************ */
+/* Utility classes                                  */
+/* ************************************************ */
+
+.container {
+    padding-inline: 2em;
+    margin-inline: auto;
+    max-width: calc( var(--rem) * 36);
+    outline: 1px solid red;
+}
+
+.sr-only {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    margin: -1px;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+    white-space: nowrap;
+    border: 0;
 }

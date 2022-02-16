@@ -1,0 +1,73 @@
+/* ************************************************ */
+/* Custom properties                                */
+/* ************************************************ */
+
+:root {
+  /* colors */
+  --clr-dark: 231 11% 33%;
+  --clr-light-dark: 227 15% 18%;
+  --clr-blue: 209 100% 60%;
+  --clr-white: 0 0% 100%;
+
+  /* font-sizes */
+  --fs-small: 1rem;
+  --fs-medium: 1.5rem;
+  --fs-large: 3rem;
+
+  /* font-weights */
+  --fw-extra-light: 200;
+  --fw-light: 300;
+  --fw-bold: 700;
+}
+
+/* ************************************************ */
+/* Reset                                            */
+/* ************************************************ */
+
+/* box-sizing */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+/* reset margins */
+h1,
+h2,
+h3,
+p,
+figure,
+picture {
+  margin: 0;
+}
+
+/* remove list styles on ul, ol elements with a list role */
+ul[role="list"],
+ol[role="list"] {
+  list-style-type: none;
+}
+
+img,
+picture {
+  max-width: 100%;
+  display: block;
+}
+
+input,
+button,
+textarea,
+select {
+  font-family: inherit;
+}
+
+/* remove animations for people who've turned them off */
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}

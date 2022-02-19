@@ -1,0 +1,41 @@
+/* ************************************************ */
+/* custom styles                                    */
+/* ************************************************ */
+
+header {
+    width: 100%;
+    height: calc( var(--rem) * 8);
+    padding: calc( var(--rem));
+    background-color: hsl( var(--clr-dark));
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+}
+
+header > h1 {
+    font-size: var(--fs-large);
+    font-weight: var(--fw-bold);
+    line-height: 1;
+}
+
+h1 > span {
+    color: hsl( var(--clr-blue));
+}
+
+header > img {
+    width: calc( var(--rem) * 4.2);
+    padding-bottom: calc( var(--rem) / 2.5);
+    cursor: pointer;
+}
+
+main {
+    padding: calc( var(--rem));
+    height: 500px;
+}
+
+.card {
+    height: calc( var(--rem) * 12);
+    padding: calc( var(--rem) / 2);
+    background-color: hsl( var(--clr-dark));
+    border-radius: calc( var(--rem) / 2);
+}

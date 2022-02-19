@@ -3,25 +3,27 @@
 /* ************************************************ */
 
 :root {
+  /* reference value after setting font-size to 10px*/
+  font-size: 62.5%;
+  --rem: 1rem;
+
   /* colors */
-  --clr-dark: 231 11% 33%;
+  --clr-black: 231 6% 7%;
+  --clr-dark: 231 11% 13%;
   --clr-light-dark: 227 15% 18%;
   --clr-blue: 209 100% 60%;
   --clr-white: 0 0% 100%;
 
   /* font-sizes */
-  --fs-small: 1rem;
-  --fs-medium: 1.5rem;
-  --fs-large: 3rem;
+  --fs-small: calc(var(--rem) * 1.6);
+  --fs-medium: calc(var(--rem) * 2.4);
+  --fs-large: calc(var(--rem) * 4.4);
 
   /* font-weights */
   --fw-extra-light: 200;
   --fw-light: 300;
   --fw-bold: 700;
 
-  /* reference value after setting font-size to 10px*/
-  font-size: 62.5%;
-  --rem: 1rem;
 }
 
 /* ************************************************ */
@@ -81,10 +83,13 @@ select {
 body {
     font-family: 'Karla', sans-serif;
     font-size: var(--fs-large);
-    background-color: hsl( var(--clr-white));
+    background-color: hsl( var(--clr-black));
     color: hsl( var(--clr-white) );
     line-height: 1.5;
     min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 /* ************************************************ */
@@ -92,10 +97,11 @@ body {
 /* ************************************************ */
 
 .container {
-    padding-inline: 2em;
-    margin-inline: auto;
-    max-width: calc( var(--rem) * 36);
-    outline: 1px solid red;
+    height: 96vh;
+    width: calc(var(--rem) * 36);
+    background-color: hsl( var(--clr-light-dark));
+    border-radius: calc(var(--rem) * .75);
+    overflow: hidden;
 }
 
 .sr-only {

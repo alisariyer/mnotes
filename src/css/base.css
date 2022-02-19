@@ -85,7 +85,7 @@ body {
     font-size: var(--fs-large);
     background-color: hsl( var(--clr-black));
     color: hsl( var(--clr-white) );
-    line-height: 1.5;
+    line-height: 1;
     min-height: 100vh;
     display: flex;
     justify-content: center;

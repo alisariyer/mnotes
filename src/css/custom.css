@@ -2,30 +2,33 @@
 /* custom styles                                    */
 /* ************************************************ */
 
-header {
+.header {
     width: 100%;
     height: calc( var(--rem) * 8);
-    padding: calc( var(--rem));
+    padding: calc( var(--rem)) calc( var(--rem) * 1.5);
     background-color: hsl( var(--clr-dark));
     display: flex;
     justify-content: space-between;
     align-items: flex-end;
+    border-bottom: 2px solid hsl( var(--clr-blue) );
 }
 
-header > h1 {
+.header > h1 {
     font-size: var(--fs-large);
     font-weight: var(--fw-bold);
-    line-height: 1;
 }
 
 h1 > span {
     color: hsl( var(--clr-blue));
 }
 
-header > img {
+.star {
     width: calc( var(--rem) * 4.2);
-    padding-bottom: calc( var(--rem) / 2.5);
     cursor: pointer;
+}
+
+.header > img {
+    padding-bottom: calc( var(--rem) / 2.5);
 }
 
 main {
@@ -35,7 +38,30 @@ main {
 
 .card {
     height: calc( var(--rem) * 12);
+    margin-bottom: calc( var(--rem));
     padding: calc( var(--rem) / 2);
     background-color: hsl( var(--clr-dark));
     border-radius: calc( var(--rem) / 2);
+}
+
+.card > header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.card h2 {
+    padding-left: calc(var(--rem) / 5);
+    font-size: var(--fs-medium);
+    color: hsl( var(--clr-blue));
+}
+
+.card .note {
+    font-weight: var(--fw-light);
+    padding-bottom: calc( var(--rem));
+}
+
+.card footer > p {
+    text-align: right;
+    font-size: var(--fs-small);
 }

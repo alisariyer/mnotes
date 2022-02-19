@@ -5,6 +5,8 @@ export default function Body() {
     return (
         <main>
             <Note />
+            <Note />
+            <Note />
         </main>
     )
 }

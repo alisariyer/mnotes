@@ -24,7 +24,7 @@
   --fw-light: 300;
   --fw-bold: 700;
 
-  --br: calc(var(--rem) / 2);;
+  --br: calc(var(--rem) / 2);
 }
 
 /* ************************************************ */
@@ -66,6 +66,8 @@ button,
 textarea,
 select {
   font-family: inherit;
+  font-size: inherit;
+  font-weight: inherit;
 }
 
 /* remove animations for people who've turned them off */
@@ -82,15 +84,16 @@ select {
 
 /* setup body */
 body {
-    font-family: 'Karla', sans-serif;
-    font-size: var(--fs-large);
-    background-color: hsl( var(--clr-black));
-    color: hsl( var(--clr-white) );
-    line-height: 1;
-    min-height: 100vh;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+  font-family: "Karla", sans-serif;
+  font-size: var(--fs-large);
+  background-color: hsl(var(--clr-black));
+  color: hsl(var(--clr-white));
+  line-height: 1;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  box-sizing: border-box;
 }
 
 /* ************************************************ */
@@ -98,21 +101,24 @@ body {
 /* ************************************************ */
 
 .container {
-    height: 96vh;
-    width: calc(var(--rem) * 36);
-    background-color: hsl( var(--clr-light-dark));
-    border-radius: calc(var(--rem) * .75);
-    overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  margin-block: calc(var(--rem) * 2);
+  min-height: 94vh;
+  width: calc(var(--rem) * 36);
+  background-color: hsl(var(--clr-light-dark));
+  border-radius: calc(var(--rem) * 0.75);
+  overflow: hidden;
 }
 
 .sr-only {
-    position: absolute;
-    width: 1px;
-    height: 1px;
-    padding: 0;
-    margin: -1px;
-    overflow: hidden;
-    clip: rect(0, 0, 0, 0);
-    white-space: nowrap;
-    border: 0;
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border: 0;
 }

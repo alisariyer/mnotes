@@ -2,6 +2,15 @@
 /* custom styles                                    */
 /* ************************************************ */
 
+/* main content is used to push button to end of the content */
+
+.main-content {
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
 /* Heading of application */
 
 .header {
@@ -39,7 +48,6 @@ h1 > span {
 
 main {
     padding: calc( var(--rem));
-    height: 500px;
 }
 
 .card {
@@ -57,19 +65,29 @@ main {
 }
 
 .card h2 {
+    height: 100%;
+    flex-basis: 50%;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    overflow-x: hidden;
     padding-left: calc(var(--rem) / 5);
     font-size: var(--fs-medium);
+    line-height: 1.2;
     color: hsl( var(--clr-blue));
 }
 
 .card .note {
     font-weight: var(--fw-light);
     padding-bottom: calc( var(--rem));
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    overflow-x: hidden;
 }
 
 .card > footer > p {
     text-align: right;
     font-size: var(--fs-small);
+    color:hsl( var(--clr-white) / .75)
 }
 
 /* footer styling of application */
@@ -82,4 +100,18 @@ main {
     width: 100%;
     height: calc( var(--rem) * 12);
     border-radius: var(--br);
+    color: hsl( var(--clr-dark));
+    background-color: hsl( var(--clr-white));
+    border: none;
+    font-weight: var(--fw-bold);
+    cursor: pointer;
+}
+
+.footer button:hover,
+.footer button:focus {
+    color: hsl( var(--clr-black) / .5);
+}
+
+.footer button:active {
+    color: hsl( var(--clr-blue));
 }

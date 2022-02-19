@@ -2,6 +2,8 @@ import React from "react";
 
 export default function Footer() {
     return (
-        <p>Hello</p>
+        <footer class="footer">
+            <button type="button">Add a new one</button>
+        </footer>
     )
 }

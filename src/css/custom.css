@@ -2,6 +2,8 @@
 /* custom styles                                    */
 /* ************************************************ */
 
+/* Heading of application */
+
 .header {
     width: 100%;
     height: calc( var(--rem) * 8);
@@ -22,6 +24,8 @@ h1 > span {
     color: hsl( var(--clr-blue));
 }
 
+/* all star image styling */
+
 .star {
     width: calc( var(--rem) * 4.2);
     cursor: pointer;
@@ -30,6 +34,8 @@ h1 > span {
 .header > img {
     padding-bottom: calc( var(--rem) / 2.5);
 }
+
+/* main content styling of appliation including notes */
 
 main {
     padding: calc( var(--rem));
@@ -61,7 +67,19 @@ main {
     padding-bottom: calc( var(--rem));
 }
 
-.card footer > p {
+.card > footer > p {
     text-align: right;
     font-size: var(--fs-small);
+}
+
+/* footer styling of application */
+
+.footer {
+    margin: calc( var(--rem));
+}
+
+.footer button{
+    width: 100%;
+    height: calc( var(--rem) * 12);
+    border-radius: var(--br);
 }

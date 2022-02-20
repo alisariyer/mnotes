@@ -16,9 +16,9 @@
 
   /* font-sizes */
   --fs-small: calc(var(--rem) * 1.6);
-  --fs-medium: calc(var(--rem) * 2.4);
-  --fs-normal: calc(var(--rem) * 3.6);
-  --fs-large: calc(var(--rem) * 4.4);
+  --fs-medium: calc(var(--rem) * 2);
+  --fs-normal: calc(var(--rem) * 3.2);
+  --fs-large: calc(var(--rem) * 4);
 
   /* font-weights */
   --fw-extra-light: 200;
@@ -26,6 +26,8 @@
   --fw-bold: 700;
 
   --br: calc(var(--rem) / 2);
+
+  user-select: none;
 }
 
 /* ************************************************ */

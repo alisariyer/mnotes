@@ -15,6 +15,46 @@
             "createdAt": "08:13 2022/02/20",
             "isFavorite": false,
             "isSelected": false
+        },
+        {
+            "id" : 3,
+            "title" : "Salut",
+            "note": "Click on add note button to add a new note",
+            "createdAt": "08:13 2022/02/20",
+            "isFavorite": false,
+            "isSelected": false
+        },
+        {
+            "id" : 4,
+            "title" : "Hi",
+            "note": "Click on add note button to add a new note",
+            "createdAt": "08:13 2022/02/20",
+            "isFavorite": false,
+            "isSelected": false
+        },
+        {
+            "id" : 5,
+            "title" : "Let's go",
+            "note": "Click on add note button to add a new note",
+            "createdAt": "08:13 2022/02/20",
+            "isFavorite": false,
+            "isSelected": false
+        },
+        {
+            "id" : 6,
+            "title" : "Wait a minute",
+            "note": "Click on add note button to add a new note",
+            "createdAt": "08:13 2022/02/20",
+            "isFavorite": false,
+            "isSelected": false
+        },
+        {
+            "id" : 7,
+            "title" : "Look",
+            "note": "Click on add note button to add a new note",
+            "createdAt": "08:13 2022/02/20",
+            "isFavorite": false,
+            "isSelected": false
         }
     ]
 }

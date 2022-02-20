@@ -44,7 +44,7 @@ h1 > span {
 /* all star image styling */
 
 .star {
-    width: calc( var(--rem) * 4.2);
+    width: calc( var(--rem) * 4);
     cursor: pointer;
 }
 
@@ -117,7 +117,7 @@ main {
     margin: calc( var(--rem));
 }
 
-.button {
+.button-add {
     position: fixed;
     bottom: calc( var(--rem) * 4);
     left: calc(50% + calc(var(--rem) * 9));
@@ -127,6 +127,76 @@ main {
     cursor: pointer;
 }
 
-.button:hover {
+.button-add:hover {
     box-shadow: 10px 10px 0px 0px hsl( var(--clr-dark));
+}
+
+/* modal styling */
+
+.modal {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: fixed;
+    z-index: 9999;
+    background-color:hsl( var(--clr-dark) / .9);
+    top: 0;
+    left: 0;
+    height: 100vh;
+    width: 100vw;
+}
+
+.modal-card {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    width: calc(var(--rem) * 36);
+    height: calc(var(--rem) * 16);
+    padding: calc(var(--rem));
+    background-color: hsl(var(--clr-white));
+    border-radius: var(--br);
+}
+
+.modal-card h3 {
+    text-align: center;
+    margin-block: calc(var(--rem) * 1.3);
+    font-size: calc( var(--fs-medium) * 1.1);
+    color: hsl( var(--clr-dark));
+}
+
+.button-group {
+    width: 100%;
+    height: calc(var(--rem) * 6);
+    border-radius: var(--br);
+    overflow: hidden;
+}
+
+.button-group .button {
+    font-size: calc( var(--fs-medium) * 1.1);
+    font-weight: var(--fw-bold);
+    width: 50%;
+    height: 100%;
+    border: 0;
+    border-radius: 0;
+    line-height: 0;
+    cursor: pointer;
+}
+
+.yes {
+    background-color: hsl( var(--clr-blue));
+}
+
+.yes:hover,
+.yes:focus {
+    background-color: hsl( var(--clr-blue) / .9);
+}
+
+.no {
+    background-color: hsl( var(--clr-dark));
+    color: hsl( var(--clr-white));
+}
+
+.no:hover,
+.no:focus {
+    background-color: hsl( var(--clr-dark) / .9);
 }

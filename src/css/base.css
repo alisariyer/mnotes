@@ -8,7 +8,7 @@
   --rem: 1rem;
 
   /* colors */
-  --clr-black: 231 6% 7%;
+  --clr-bg: 231 6% 7%;
   --clr-dark: 231 11% 13%;
   --clr-light-dark: 227 15% 18%;
   --clr-blue: 209 100% 60%;
@@ -17,6 +17,7 @@
   /* font-sizes */
   --fs-small: calc(var(--rem) * 1.6);
   --fs-medium: calc(var(--rem) * 2.4);
+  --fs-normal: calc(var(--rem) * 3.6);
   --fs-large: calc(var(--rem) * 4.4);
 
   /* font-weights */
@@ -86,7 +87,7 @@ select {
 body {
   font-family: "Karla", sans-serif;
   font-size: var(--fs-large);
-  background-color: hsl(var(--clr-black));
+  background-color: hsl(var(--clr-bg));
   color: hsl(var(--clr-white));
   line-height: 1;
   min-height: 100vh;
@@ -101,14 +102,13 @@ body {
 /* ************************************************ */
 
 .container {
-  display: flex;
-  flex-direction: column;
   margin-block: calc(var(--rem) * 2);
   min-height: 94vh;
   width: calc(var(--rem) * 36);
   background-color: hsl(var(--clr-light-dark));
   border-radius: calc(var(--rem) * 0.75);
-  overflow: hidden;
+  overflow: hidden;  position: relative;
+  z-index: 0;
 }
 
 .sr-only {

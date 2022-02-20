@@ -7,6 +7,9 @@ export default function Body() {
             <Note />
             <Note />
             <Note />
+            <Note />
+            <Note /><Note />
+            <Note />
         </main>
     )
 }

@@ -28,6 +28,7 @@
   --br: calc(var(--rem) / 2);
 
   user-select: none;
+  -webkit-tap-highlight-color: transparent;
 }
 
 /* ************************************************ */

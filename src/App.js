@@ -38,6 +38,10 @@ export default function App() {
 
   // handle double click on card
   const handleSelection = (id) => {
+    // if between mouseDown and mouseUp delay smaller than 5 seconds ignore
+    const delay = new Date() - seconds;
+    console.log(delay);
+    if (delay < 300) return;
     setNotes((prevNotes) => {
       return prevNotes.map((note) =>
         note.id === id ? { ...note, isSelected: !note.isSelected } : note
@@ -50,9 +54,13 @@ export default function App() {
 
   // handle action as delete or add a new note
   const handleAction = (isDelete) => {
-    if (isDelete) setModal(true);
+    if (isDelete) {
+      setModal(true);
+    } else {
+      setIsEdit(true);
+    }
   };
-  console.log("App inside");
+
   // to delete selected notes
   const handleDelete = (isYes) => {
     setModal(false);
@@ -60,6 +68,23 @@ export default function App() {
       setNotes((prevNotes) => prevNotes.filter((note) => !note.isSelected));
     }
   };
+
+  // to add a new note
+  const [isEdit, setIsEdit] = useState(false);
+
+  // to calculate the time between mouse down and mouse up on card
+  const [seconds, setSeconds] = useState(0);
+
+  // to handle edit operation wh
+  const handleEdit = (id) => {
+    console.log('mouse down -- handleEdit')
+  }
+
+  const handleMouseDown = () => {
+    const seconds = new Date();
+    setSeconds(seconds);
+  }
+
 
   return (
     <>
@@ -76,6 +101,9 @@ export default function App() {
           handleIsFavorite={handleIsFavorite}
           onlyFavorites={onlyFavorites}
           handleSelection={handleSelection}
+          isEdit={isEdit}
+          handleEdit={handleEdit}
+          handleMouseDown={handleMouseDown}
         />
         <Footer isDelete={isAnySelected} handleAction={handleAction} />
       </div>

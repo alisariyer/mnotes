@@ -1,11 +1,11 @@
 import React from "react";
 
-export default function Note({note, handleIsFavorite, handleSelection}) {
+export default function Note({note, handleIsFavorite, handleSelection, handleEdit, handleMouseDown}) {
   const imageEmpty = note.isSelected ? "star-empty-white" : "star-empty-blue";
   const imageFill = note.isSelected ? "star-fill-white" : "star-fill-blue";
   const imageName = note.isFavorite ? imageFill : imageEmpty;
   return (
-    <section className={`card ${note.isSelected ? 'selected' : ''}`} onDoubleClick={() => handleSelection(note.id)}>
+    <section className={`card ${note.isSelected ? 'selected' : ''}`} onDoubleClick={() => handleEdit(note.id)} onMouseDown={handleMouseDown} onMouseUp={() => handleSelection(note.id)}>
       <header>
         <h2>{note.title}</h2>
         <img className="star" src={`./images/${imageName}.png`} alt="star filled" onClick={(e) => handleIsFavorite(e, note.id)}/>

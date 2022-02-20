@@ -66,6 +66,10 @@ main {
     border-radius: calc( var(--rem) / 2);
 }
 
+.card:hover {
+    box-shadow: 0 0 3px 2px hsl( var(--clr-blue) / .1);
+}
+
 .card > header {
     display: flex;
     justify-content: space-between;
@@ -98,6 +102,15 @@ main {
     color:hsl( var(--clr-white) / .75)
 }
 
+/* change style of card in case of select */
+.selected {
+    background-color: hsl( var(--clr-blue) );
+}
+
+.selected h2 {
+    color: hsl( var(--clr-dark));
+}
+
 /* footer styling of application */
 
 .footer {
@@ -110,7 +123,7 @@ main {
     left: calc(50% + calc(var(--rem) * 9));
     width: calc( var(--rem) * 7);
     border-radius: 50%;
-    box-shadow: 0 0 10px 3px hsl( var(--clr-dark));
+    box-shadow: 0 0 10px 10px hsl( var(--clr-dark));
     cursor: pointer;
 }
 

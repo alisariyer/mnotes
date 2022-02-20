@@ -7,7 +7,7 @@ import data from "./data.json";
 
 export default function App() {
   // use notes state to initialize Note components
-  const [notes, setNotes] = useState(data.notes);
+  const [notes, setNotes] = useState(() => JSON.parse(localStorage.getItem("notes")) || data.notes);
 
   // handleIsFavorite is to manage note's favorite status
   const handleIsFavorite = (e, id) => {
@@ -32,6 +32,7 @@ export default function App() {
 
   // handle if any card is selected
   useEffect(() => {
+    localStorage.setItem("notes", JSON.stringify(notes));
     setIsAnySelected(notes.some((note) => note.isSelected));
   }, [notes]);
 

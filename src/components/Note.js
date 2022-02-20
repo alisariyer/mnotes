@@ -5,7 +5,7 @@ export default function Note({note, handleIsFavorite, handleSelection, handleEdi
   const imageFill = note.isSelected ? "star-fill-white" : "star-fill-blue";
   const imageName = note.isFavorite ? imageFill : imageEmpty;
   return (
-    <section className={`card ${note.isSelected ? 'selected' : ''}`} onDoubleClick={() => handleEdit(note.id)} onMouseDown={handleMouseDown} onMouseUp={() => handleSelection(note.id)}>
+    <section className={`card ${note.isSelected ? 'selected' : ''}`} onDoubleClick={() => handleEdit(note.id)} onMouseDown={handleMouseDown} onMouseUp={() => handleSelection(note.id)} onTouchStart={handleMouseDown} onTouchEnd={() => handleSelection(note.id)}>
       <header>
         <h2>{note.title}</h2>
         <img className="star" src={`./images/${imageName}.png`} alt="star filled" onClick={(e) => handleIsFavorite(e, note.id)}/>

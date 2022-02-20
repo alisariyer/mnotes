@@ -1,0 +1,18 @@
+{   
+    "notes" : [
+        {
+            "id" : 1,
+            "title" : "Initial Note",
+            "note": "Welcome to mNote v1.0, you can use this note application freely on front-end side and more securely",
+            "createdAt": "08:07 2022/02/20",
+            "isFavorite": true
+        },
+        {
+            "id" : 2,
+            "title" : "Welcome",
+            "note": "Click on add note button to add a new note",
+            "createdAt": "08:13 2022/02/20",
+            "isFavorite": false
+        }
+    ]
+}

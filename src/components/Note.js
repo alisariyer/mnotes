@@ -1,17 +1,18 @@
 import React from "react";
 
-export default function Note() {
+export default function Note({note, handleIsFavorite}) {
+  const imageName = note.isFavorite ? "star-fill-blue" : "star-empty-blue";
   return (
-    <section class="card">
+    <section className="card">
       <header>
-        <h2>Note 1</h2>
-        <img class="star" src="./images/star-empty-blue.png" alt="star filled" />
+        <h2>{note.title}</h2>
+        <img className="star" src={`./images/${imageName}.png`} alt="star filled" onClick={() => handleIsFavorite(note.id)}/>
       </header>
       <div>
-        <p class="note">Here some notes all about you but </p>
+        <p className="note">{note.note}</p>
       </div>
       <footer>
-        <p>Created at <time datetime="2022-05-15T12:30">12:30, 2022/02/20</time></p>
+        <p>Created at <time dateTime={`${note.createdAt.slice(6)}T${note.createdAt.slice(0,5)}`}>{note.createdAt}</time></p>
       </footer>
     </section>
   );

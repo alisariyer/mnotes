@@ -18,7 +18,7 @@
 /* Heading of application */
 
 .header {
-    width: calc(var(--rem) * 36);
+    width: 94vw;
     height: calc( var(--rem) * 8);
     margin-top: calc( var(--rem) * 2);
     padding: calc( var(--rem)) calc( var(--rem) * 1.5);
@@ -120,7 +120,7 @@ main {
 .button-add {
     position: fixed;
     bottom: calc( var(--rem) * 4);
-    left: calc(50% + calc(var(--rem) * 9));
+    right: calc(4vw + var(--rem));
     width: calc( var(--rem) * 7);
     border-radius: 50%;
     box-shadow: 0 0 10px 10px hsl( var(--clr-dark));

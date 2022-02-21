@@ -1,0 +1,11 @@
+@media (min-width: 360px) {
+    .container{
+      width: calc(var(--rem) * 36);
+    }
+    .header {
+        width: calc(var(--rem) * 36);
+    }
+    .button-add {
+        left: calc(50% + calc(var(--rem) * 10));
+    }
+  }

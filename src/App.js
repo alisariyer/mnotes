@@ -41,6 +41,7 @@ export default function App() {
     // if between mouseDown and mouseUp delay smaller than 5 seconds ignore
     const delay = new Date() - seconds;
     console.log(delay);
+
     if (delay < 300) return;
     setNotes((prevNotes) => {
       return prevNotes.map((note) =>
@@ -77,14 +78,13 @@ export default function App() {
 
   // to handle edit operation wh
   const handleEdit = (id) => {
-    console.log('mouse down -- handleEdit')
+    console.log('mouse down -- handleEdit, id: ', id)
   }
 
   const handleMouseDown = () => {
     const seconds = new Date();
     setSeconds(seconds);
   }
-
 
   return (
     <>

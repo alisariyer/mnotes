@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from "react";
+import {nanoid} from 'nanoid';
 import Header from "./components/Header";
 import Body from "./components/Body";
 import Footer from "./components/Footer";
@@ -77,13 +78,48 @@ export default function App() {
   const [seconds, setSeconds] = useState(0);
 
   // to handle edit operation wh
-  const handleEdit = (id) => {
-    console.log('mouse down -- handleEdit, id: ', id)
+  const handleEdit = (note) => {
+    setCurrentNote(note);
+    setIsEdit(true);
   }
 
   const handleMouseDown = () => {
     const seconds = new Date();
     setSeconds(seconds);
+  }
+
+  // To discard edit
+  const discardEdit = () => {
+    setIsEdit(false);
+  }
+console.log('heee')
+  // Keep currentNoteId if the note is double clicked to edit
+  const [currentNote, setCurrentNote] = useState(null);
+
+  // To save new note or update note
+  const saveEdit = (e, editedNote) => {
+    e.preventDefault();
+    if (editedNote) {
+      setNotes(prevNotes => {
+        return prevNotes.map(note => note.id === editedNote.id ? 
+          { ...note, title: e.target[0].value, note: e.target[1].value} :
+          note)
+      })
+    } else {
+      setNotes(prevNotes => [
+        ...prevNotes,
+        {
+          id: nanoid(),
+          title: e.target[0].value,
+          note: e.target[1].value,
+          createdAt: '08:07 2022/02/20',
+          isFavorite: false,
+          isSelected: false
+        }
+      ])
+    }
+    setIsEdit(false);
+    setCurrentNote(null);
   }
 
   return (
@@ -104,8 +140,11 @@ export default function App() {
           isEdit={isEdit}
           handleEdit={handleEdit}
           handleMouseDown={handleMouseDown}
+          discardEdit={discardEdit}
+          currentNote={currentNote}
+          saveEdit={saveEdit}
         />
-        <Footer isDelete={isAnySelected} handleAction={handleAction} />
+        {!isEdit && <Footer isDelete={isAnySelected} handleAction={handleAction} />}
       </div>
     </>
   );

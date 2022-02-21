@@ -39,6 +39,8 @@
 *,
 *::before,
 *::after {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
   box-sizing: border-box;
 }
 
@@ -110,7 +112,8 @@ body {
   width: 94vw;
   background-color: hsl(var(--clr-light-dark));
   border-radius: calc(var(--rem) * 0.75);
-  overflow: hidden;  position: relative;
+  overflow: hidden;
+  position: relative;
   z-index: 0;
 }
 

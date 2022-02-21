@@ -1,5 +1,6 @@
 import React from "react";
 import Note from "./Note";
+import NewNote from "./NewNote"
 
 export default function Body({
   notes,
@@ -8,7 +9,10 @@ export default function Body({
   handleSelection,
   isEdit,
   handleEdit,
-  handleMouseDown
+  handleMouseDown,
+  discardEdit,
+  currentNote,
+  saveEdit
 }) {
   const cards = notes.map((note) =>
     // if the favorite star is clicked on header filter only favorites notes else show all
@@ -36,5 +40,5 @@ export default function Body({
       />
     )
   );
-  return <main>{!isEdit && cards}</main>;
+  return <main>{isEdit ? <NewNote discardEdit={discardEdit} currentNote={currentNote} saveEdit={saveEdit}/> : cards}</main>;
 }

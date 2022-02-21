@@ -201,3 +201,37 @@ main {
 .no:focus {
     background-color: hsl( var(--clr-dark) / .9);
 }
+
+/* form styling for add/edit note */
+
+form {
+    height: 100%;
+    margin: calc(var(--rem) / 2);
+}
+
+form > * {
+    width: 100%;
+}
+
+.input {
+    background-color: hsl( var(--clr-dark));
+    border-radius: var(--br);
+    border: none;
+    outline: none;
+    margin-bottom: var(--rem);
+    color: hsl( var(--clr-white));
+    padding-inline: var(--rem);
+    font-weight: var(--fw-light);
+    font-size: var(--fs-normal);
+}
+
+.input.input-title {
+    height: calc(var(--rem) * 5);
+}
+
+.input.input-content {
+    height: calc( 100vh - calc(var(--rem) * 28));
+    resize: none;
+    overflow: hidden;
+}
+

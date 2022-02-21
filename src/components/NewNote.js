@@ -11,8 +11,8 @@ export default function NewNote( {discardEdit, currentNote, saveEdit } ) {
     }
     return (
         <form onSubmit={(e) => saveEdit(e, currentNote)}>
-            <input type="text" placeholder="Title" className="input input-title" name="title" value={note.title} onChange={(e) => updateContent(e)}/>
-            <textarea placeholder="Title" className="input input-content" name="note" value={note.note} onChange={(e) => updateContent(e)}/>
+            <input type="text" placeholder="Title" className="input input-title" name="title" value={note ? note.title : ''} onChange={(e) => updateContent(e)}/>
+            <textarea placeholder="Title" className="input input-content" name="note" value={note ? note.note : ''} onChange={(e) => updateContent(e)}/>
             <div className="button-group">
                 <button className="button no" type="button" onClick={discardEdit}>Discard</button>
                 <button className="button yes" type="submit">Save</button>

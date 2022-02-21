@@ -165,19 +165,20 @@ main {
 }
 
 .button-group {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
     width: 100%;
     height: calc(var(--rem) * 6);
-    border-radius: var(--br);
-    overflow: hidden;
 }
 
 .button-group .button {
     font-size: calc( var(--fs-medium) * 1.1);
     font-weight: var(--fw-bold);
-    width: 50%;
-    height: 100%;
+    width: 48%;
+    height: 80%;
     border: 0;
-    border-radius: 0;
+    border-radius: var(--br);
     line-height: 0;
     cursor: pointer;
 }

@@ -15,7 +15,8 @@ A modern and minimalist note application written with React.js library
 
 ### Screenshot
 
-![](./screenshot.png)
+![home screenshot](./screenshot-home.png)
+![edit screenshot](./screenshot-edit.png)
 
 ### Links
 

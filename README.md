@@ -20,7 +20,7 @@ A modern and minimalist note application written with React.js library
 
 ### Links
 
-- Live Site on Github Pages: [Live site url](https://alisariyer.github.io/comments-app/)
+- Live Site on Github Pages: [Live site url](https://alisariyer.github.io/mnotes/)
 
 ## My process
 

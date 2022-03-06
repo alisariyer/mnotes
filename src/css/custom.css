@@ -20,7 +20,6 @@
 .header {
     width: 100vw;
     height: calc( var(--rem) * 10);
-    /* margin-top: calc( var(--rem) * 2); */
     padding: calc( var(--rem)) calc( var(--rem) * 1.5);
     position: fixed;
     z-index: 2000;
@@ -28,7 +27,6 @@
     justify-content: space-between;
     align-items: flex-end;
     border-bottom: 2px solid hsl( var(--clr-blue) );
-    /* border-radius: var(--br) var(--br) 0 0; */
     background-color: hsl( var(--clr-dark));
 }
 

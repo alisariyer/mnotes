@@ -18,9 +18,9 @@
 /* Heading of application */
 
 .header {
-    width: 94vw;
-    height: calc( var(--rem) * 8);
-    margin-top: calc( var(--rem) * 2);
+    width: 100vw;
+    height: calc( var(--rem) * 10);
+    /* margin-top: calc( var(--rem) * 2); */
     padding: calc( var(--rem)) calc( var(--rem) * 1.5);
     position: fixed;
     z-index: 2000;
@@ -28,7 +28,7 @@
     justify-content: space-between;
     align-items: flex-end;
     border-bottom: 2px solid hsl( var(--clr-blue) );
-    border-radius: var(--br) var(--br) 0 0;
+    /* border-radius: var(--br) var(--br) 0 0; */
     background-color: hsl( var(--clr-dark));
 }
 
@@ -55,7 +55,7 @@ h1 > span {
 /* main content styling of appliation including notes */
 
 main {
-    padding: calc( var(--rem) * 9) calc( var(--rem)) 0;
+    padding: calc( var(--rem) * 11) calc( var(--rem)) 0;
 }
 
 .card {
@@ -119,7 +119,7 @@ main {
 
 .button-add {
     position: fixed;
-    bottom: calc( var(--rem) * 4);
+    bottom: calc( var(--rem) * 2);
     right: calc(4vw + var(--rem));
     width: calc( var(--rem) * 7);
     border-radius: 50%;
